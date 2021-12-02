@@ -1,1 +1,23 @@
-test
+How To Run:
+
+in ./django-rest-tutorial/mysite
+$ python3 manage.py runserver 0.0.0.0:8000
+in ./grpc-fib
+$ python3 server.py --ip 0.0.0.0 --port 8080
+in ./grpc-log
+$ python3 server.py --ip 0.0.0.0 --port 8081
+in ./eclipse-mosquitto
+$ docker run -d -it -p 1883:1883 -v $(pwd)/mosquitto.conf:/mosquitto/config/mosquitto.conf eclipse-mosquitto
+
+How To Use
+
+Post:
+
+$curl -X POST http://localhost:8000/rest/fibonacii -d '{"order":{NUMBER}}'
+
+GET:
+
+$curl -X GET http://localhost:8000/rest/fibonacii
+
+
+
