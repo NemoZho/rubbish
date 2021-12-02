@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+service LogCalculator {
+    rpc Compute(LogRequest) returns (LogResponse);
+}
+
+message LogRequest {
+}
+
+message LogResponse {
+    repeated int32 data = 1;
+}
